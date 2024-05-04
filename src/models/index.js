@@ -1,21 +1,25 @@
 "use strict";
+require("dotenv").config();
 
 const fs = require("fs");
 const path = require("path");
 const Sequelize = require("sequelize");
 const process = require("process");
 const basename = path.basename(__filename);
-const env = process.env.NODE_ENV || "development";
-const config = require(__dirname + "/../config/config.js")[env];
+
 const db = {};
 let sequelize;
 
 sequelize = new Sequelize(
-  config.database,
-  config.username,
-  config.password,
-  config
+  process.env.DATABASE,
+  process.env.USERNAMEDB,
+  process.env.PASSWORD,
+  {
+    host: process.env.HOST,
+    dialect: "mysql",
+  }
 );
+
 fs.readdirSync(__dirname)
   .filter((file) => {
     return (
