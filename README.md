@@ -23,6 +23,12 @@
 
 [https://manage-cloud.netlify.app/](https://manage-cloud.netlify.app/)
 
+## Api-Base-URL 🔗
+
+[https://cloud-management.onrender.com](https://cloud-management.onrender.com)
+
+- api might be show response it's because it hosted on render free service
+
 # task
 
 There will be multiple clusters and each cluster will have zero or more machines.
@@ -50,7 +56,7 @@ Backend
 
 Database
 
-- mySql
+- mySql (AWS RDS )
 
 Fronted
 
